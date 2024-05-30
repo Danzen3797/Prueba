@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{/*Encabezado*/
+    background-image: url("images/baner1.jpeg");
+    text-align: center;
+    padding: 1px;
+}
+h1{/*Titulo ubicado en la esquina superior izquierda*/
+    font-size: 2em;
+    font-family: Georgia,;
+    text-align: start;
+    font-weight: bold;
+    margin-left: 10%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: white;
+}
+h2{/*Titulo de la página*/
+   font-size: 3em;
+   font-family: Arial;
+   color: white;
+   width: 80%;
+   margin-left: 10%;
+}
+h3{/*Titulos de las secciones*/
+    font-size: 2em;
+    font-family: Georgia,;
+    text-align: center;
+}
+.interior{/*primera caja que contiene barra en blanco, contenido en el centro y barra en blanco*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template: 
+    'blanco1 galeria blanco2'
+    'equipo equipo equipo'
+    'cifras cifras cifras';
+    width: 100%;
+}
+/*Definición de las barras en blanco a los laterales*/
+    .blanco1{width: 200px;    }
+    .blanco2{width: 200px;}
+.galeria{/*grid anexado dentro de centro del interior*/
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 30px;
+}
+.galeria div{/*Cuadrícula de fotos*/
+    background-color: rgb(88, 94, 94);
+    text-align: center;
+    width: 100%;
+}
+/*Las siguientes imagenes convinan celdas del grid de la cuadrícula de fotos*/
+.ima1{grid-area: 1/1/span 2/span 2;}
+.ima7{grid-area: 3/2/span 2/span 2;}
+.ima11{grid-area: 5/1/span 2/span 2;}
+.ima12{grid-area: 5/3/span 2/span 2;}
+/*Cambiar tamaño de imagen al disponible en celda grid*/
+img{width: 100%;}
+.equipo{/*grid anexado dentro de centro del interior*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    gap: 30px;
+    justify-content: center;
+}
+.imgc{/*Formato de fotos del grid equipo*/
+    border-radius: 50%;
+    width: 100%;
+    padding: 2px;
+}
+/*Convinación de celdas para texto - grid equipo*/
+.desc{grid-column: 1/span 4;}
+.cifras{/*grid anexado dentro de centro del interior*/
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 60px;
+    justify-content: center;
+    padding: 20px;
+}
+/*Organización de las cifras*/
+.cifras div{text-align: center;}
+/*Caracteristicas del texto del grid cifras*/
+.tverde{
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(65, 133, 65);
+}
+.tnegro{border-top: 5px solid green;}
+footer{/*Pie de pagina*/
+    background-image: url("images/fot1.jpeg");
+    justify-content: center;
+    text-align: center;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.aviso{/*pie de página en negro para derechos reservados*/
+    background: black;
+    padding: 25px;
+    width: 100%;
+}
+input{/*Estilo de los botones "Comenzar" y "Empezar"*/
+    background: green;
+    padding: 10px;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+}
