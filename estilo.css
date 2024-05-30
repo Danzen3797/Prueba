@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background: pink;
 }
 header{/*Encabezado*/
     background-image: url("images/baner1.jpeg");
